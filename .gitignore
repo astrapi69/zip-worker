@@ -1,23 +1,82 @@
-# Compiled class file
+##################
+# Compiled files #
+##################
 *.class
 
-# Log file
-*.log
+##################
+# intellij files #
+##################
+*.iml
+!.idea/runConfigurations
+.idea/inspectionProfiles
+.idea/copyright
+.idea/libraries
+.idea/codeStyles
+.idea/*.*
+/out/
 
-# BlueJ files
-*.ctxt
+#################
+# eclipse files #
+#################
+/.project
+/.classpath
+/.settings
+/.tern-project
 
-# Mobile Tools for Java (J2ME)
-.mtj.tmp/
+#########################
+# maven generated files #
+#########################
+/target
+*.versionsBackup
+/pom.xml.bak
 
-# Package Files #
-*.jar
-*.war
-*.nar
-*.ear
+#############
+# Zip files #
+#############
+*.tar
 *.zip
-*.tar.gz
+*.7z
+*.dmg
+*.gz
+*.iso
+*.jar
 *.rar
 
-# virtual machine crash logs, see http://www.java.com/en/download/help/error_hotspot.xml
+##############
+# Logs files #
+##############
+*.log
+
+#################
+# test-ng files #
+#################
+/test-output
+
+############################
+# Binaries generated files #
+############################
+/bin
+
+################
+# gradle files #
+################
+/build
+/.gradle
+/gradle
+# Ignore Gradle GUI config
+gradle-app.setting
+# Avoid ignoring Gradle wrapper jar file (.jar files are usually ignored)
+!/gradle/wrapper/gradle-wrapper.jar
+!/gradle/wrapper/gradle-wrapper.properties
+# Cache of project
+.gradletasknamecache
+# # Work around https://youtrack.jetbrains.com/issue/IDEA-116898
+# gradle/wrapper/gradle-wrapper.properties
+
+##############################################################
+# virtual machine crash logs                                 #
+# see http://www.java.com/en/download/help/error_hotspot.xml #
+##############################################################
 hs_err_pid*
+/.attach_pid*
+/.idea/$PRODUCT_WORKSPACE_FILE$
