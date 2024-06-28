@@ -49,22 +49,24 @@
  */
 package de.alpharogroup.file.zip;
 
-import de.alpharogroup.file.create.FileFactory;
-import de.alpharogroup.file.delete.DeleteFileExtensions;
-import de.alpharogroup.file.search.PathFinder;
-import de.alpharogroup.file.write.WriteFileExtensions;
-import org.junit.jupiter.api.Test;
+import static org.junit.jupiter.api.Assertions.*;
 
 import java.io.File;
 import java.io.IOException;
 import java.security.NoSuchAlgorithmException;
 
-import static org.junit.jupiter.api.Assertions.*;
+import org.junit.jupiter.api.Test;
+
+import de.alpharogroup.file.create.FileFactory;
+import de.alpharogroup.file.delete.DeleteFileExtensions;
+import de.alpharogroup.file.search.PathFinder;
+import de.alpharogroup.file.write.WriteFileExtensions;
 
 class SevenZipTest
 {
 
-	@Test void zipFiles() throws IOException
+	@Test
+	void zipFiles() throws IOException
 	{
 		File testFile1;
 		File testFile2;
@@ -96,7 +98,9 @@ class SevenZipTest
 		DeleteFileExtensions.delete(destination);
 	}
 
-	@Test void testExtract() throws IOException {
+	@Test
+	void testExtract() throws IOException
+	{
 		File testFile1;
 		File testFile2;
 		File testFile3;
