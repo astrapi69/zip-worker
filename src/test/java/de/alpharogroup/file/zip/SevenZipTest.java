@@ -1,29 +1,4 @@
 /**
- * ====
- *     The MIT License
- *
- *     Copyright (C) 2015 Asterios Raptis
- *
- *     Permission is hereby granted, free of charge, to any person obtaining
- *     a copy of this software and associated documentation files (the
- *     "Software"), to deal in the Software without restriction, including
- *     without limitation the rights to use, copy, modify, merge, publish,
- *     distribute, sublicense, and/or sell copies of the Software, and to
- *     permit persons to whom the Software is furnished to do so, subject to
- *     the following conditions:
- *
- *     The above copyright notice and this permission notice shall be
- *     included in all copies or substantial portions of the Software.
- *
- *     THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND,
- *     EXPRESS OR IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF
- *     MERCHANTABILITY, FITNESS FOR A PARTICULAR PURPOSE AND
- *     NONINFRINGEMENT. IN NO EVENT SHALL THE AUTHORS OR COPYRIGHT HOLDERS BE
- *     LIABLE FOR ANY CLAIM, DAMAGES OR OTHER LIABILITY, WHETHER IN AN ACTION
- *     OF CONTRACT, TORT OR OTHERWISE, ARISING FROM, OUT OF OR IN CONNECTION
- *     WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE SOFTWARE.
- * ====
- *
  * The MIT License
  *
  * Copyright (C) 2020 Asterios Raptis
@@ -53,14 +28,14 @@ import static org.junit.jupiter.api.Assertions.*;
 
 import java.io.File;
 import java.io.IOException;
-import java.security.NoSuchAlgorithmException;
 
 import org.junit.jupiter.api.Test;
 
-import de.alpharogroup.file.create.FileFactory;
-import de.alpharogroup.file.delete.DeleteFileExtensions;
-import de.alpharogroup.file.search.PathFinder;
-import de.alpharogroup.file.write.WriteFileExtensions;
+import io.github.astrapi69.file.create.DirectoryFactory;
+import io.github.astrapi69.file.create.FileFactory;
+import io.github.astrapi69.file.delete.DeleteFileExtensions;
+import io.github.astrapi69.file.search.PathFinder;
+import io.github.astrapi69.file.write.StoreFileExtensions;
 
 class SevenZipTest
 {
@@ -75,7 +50,7 @@ class SevenZipTest
 		File sevenZipFile;
 
 		destination = new File(PathFinder.getSrcTestResourcesDir(), "/tmp");
-		FileFactory.newDirectory(destination);
+		DirectoryFactory.newDirectory(destination);
 		sevenZipFile = new File(destination, "testzip.7z");
 		FileFactory.newFile(sevenZipFile);
 
@@ -83,9 +58,9 @@ class SevenZipTest
 		testFile2 = new File(PathFinder.getSrcTestResourcesDir(), "testZip2.txt");
 		testFile3 = new File(PathFinder.getSrcTestResourcesDir(), "testZip3.txt");
 
-		WriteFileExtensions.string2File(testFile1, "Its a beautifull day!!!");
-		WriteFileExtensions.string2File(testFile2, "Its a beautifull evening!!!");
-		WriteFileExtensions.string2File(testFile3, "Its a beautifull night!!!");
+		StoreFileExtensions.toFile(testFile1, "Its a beautifull day!!!");
+		StoreFileExtensions.toFile(testFile2, "Its a beautifull evening!!!");
+		StoreFileExtensions.toFile(testFile3, "Its a beautifull night!!!");
 
 		SevenZip.zipFiles(sevenZipFile, "", testFile1, testFile2, testFile3);
 
@@ -108,7 +83,7 @@ class SevenZipTest
 		File sevenZipFile;
 
 		destination = new File(PathFinder.getSrcTestResourcesDir(), "/tmp");
-		FileFactory.newDirectory(destination);
+		DirectoryFactory.newDirectory(destination);
 		sevenZipFile = new File(destination, "testzip.7z");
 		FileFactory.newFile(sevenZipFile);
 
@@ -116,9 +91,9 @@ class SevenZipTest
 		testFile2 = new File(PathFinder.getSrcTestResourcesDir(), "testZip2.txt");
 		testFile3 = new File(PathFinder.getSrcTestResourcesDir(), "testZip3.txt");
 
-		WriteFileExtensions.string2File(testFile1, "Its a beautifull day!!!");
-		WriteFileExtensions.string2File(testFile2, "Its a beautifull evening!!!");
-		WriteFileExtensions.string2File(testFile3, "Its a beautifull night!!!");
+		StoreFileExtensions.toFile(testFile1, "Its a beautifull day!!!");
+		StoreFileExtensions.toFile(testFile2, "Its a beautifull evening!!!");
+		StoreFileExtensions.toFile(testFile3, "Its a beautifull night!!!");
 
 		assertTrue(testFile1.exists());
 		assertTrue(testFile2.exists());

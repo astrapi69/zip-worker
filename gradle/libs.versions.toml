@@ -1,6 +1,6 @@
 [versions]
-commons-compress-version = "1.19"
-file-worker-version = "5.4"
+commons-compress-version = "1.26.2"
+file-worker-version = "17.2"
 gradle-plugin-grgit-version = "5.2.2"
 gradle-plugin-kotlin-version = "2.0.20-Beta1"
 gradle-plugin-license-version = "0.16.1"
@@ -9,15 +9,15 @@ gradle-plugin-version-catalog-update-version = "0.8.4"
 gradle-plugin-versions-version = "0.51.0"
 junit-jupiter-version = "5.11.0-M2"
 junit-platform-launcher-version = "1.11.0-M2"
-mystic-crypt-version = "7.3"
-xz-version = "1.8"
+mystic-crypt-version = "9"
+xz-version = "1.9"
 
 [libraries]
 commons-compress = { module = "org.apache.commons:commons-compress", version.ref = "commons-compress-version" }
-file-worker = { module = "de.alpharogroup:file-worker", version.ref = "file-worker-version" }
+file-worker = { module = "io.github.astrapi69:file-worker", version.ref = "file-worker-version" }
 junit-jupiter = { module = "org.junit.jupiter:junit-jupiter", version.ref = "junit-jupiter-version" }
 junit-platform-launcher = { module = "org.junit.platform:junit-platform-launcher", version.ref = "junit-platform-launcher-version" }
-mystic-crypt = { module = "de.alpharogroup:mystic-crypt", version.ref = "mystic-crypt-version" }
+mystic-crypt = { module = "io.github.astrapi69:mystic-crypt", version.ref = "mystic-crypt-version" }
 xz = { module = "org.tukaani:xz", version.ref = "xz-version" }
 
 [bundles]
