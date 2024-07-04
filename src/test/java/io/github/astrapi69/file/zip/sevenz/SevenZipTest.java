@@ -22,7 +22,7 @@
  * OF CONTRACT, TORT OR OTHERWISE, ARISING FROM, OUT OF OR IN CONNECTION
  * WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE SOFTWARE.
  */
-package de.alpharogroup.file.zip;
+package io.github.astrapi69.file.zip.sevenz;
 
 import static org.junit.jupiter.api.Assertions.*;
 
@@ -62,7 +62,7 @@ class SevenZipTest
 		StoreFileExtensions.toFile(testFile2, "Its a beautifull evening!!!");
 		StoreFileExtensions.toFile(testFile3, "Its a beautifull night!!!");
 
-		SevenZip.zipFiles(sevenZipFile, "", testFile1, testFile2, testFile3);
+		KtSevenZip.zipFiles(sevenZipFile, testFile1, testFile2, testFile3);
 
 		assertTrue(sevenZipFile.exists());
 		// clean up
@@ -99,13 +99,13 @@ class SevenZipTest
 		assertTrue(testFile2.exists());
 		assertTrue(testFile3.exists());
 
-		SevenZip.zipFiles(sevenZipFile, "", testFile1, testFile2, testFile3);
+		KtSevenZip.zipFiles(sevenZipFile, "", testFile1, testFile2, testFile3);
 
 		DeleteFileExtensions.delete(testFile1);
 		DeleteFileExtensions.delete(testFile2);
 		DeleteFileExtensions.delete(testFile3);
 
-		SevenZip.extract(sevenZipFile, destination);
+		KtSevenZip.extract(sevenZipFile, destination);
 
 		testFile1 = new File(destination, "testZip1.txt");
 		testFile2 = new File(destination, "testZip2.txt");

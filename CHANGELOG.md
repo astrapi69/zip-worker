@@ -3,6 +3,7 @@
 
 Version 1-SNAPSHOT
 -------------
+
 ADDED:
 
 - new CHANGELOG.md file created
@@ -14,8 +15,7 @@ CHANGED:
 - update of gradle-plugin dependency with id 'com.diffplug.spotless' to new beta version 7.0.0.BETA1
 - update of gradle-plugin dependency with id 'com.github.ben-manes.versions' to new minor version 0.51.0
 - update of gradle-plugin dependency with id 'org.jetbrains.kotlin.jvm' to new beta version 2.0.20-Beta1
-- update of dependency commons-io to new version 2.16.1
-- update of dependency jakarta-servlet-api to new version 6.1.0
+- update of test dependency file-worker to new version 17.3
 - update of test dependency junit-jupiter to new version 5.11.0-M2
 
 Notable links:

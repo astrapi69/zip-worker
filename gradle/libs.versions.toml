@@ -1,6 +1,6 @@
 [versions]
 commons-compress-version = "1.26.2"
-file-worker-version = "17.2"
+file-worker-version = "17.3"
 gradle-plugin-grgit-version = "5.2.2"
 gradle-plugin-kotlin-version = "2.0.20-Beta1"
 gradle-plugin-license-version = "0.16.1"
@@ -22,7 +22,9 @@ xz = { module = "org.tukaani:xz", version.ref = "xz-version" }
 
 [bundles]
 unit-testing = [
+    "file-worker",
     "junit-jupiter",
+    "mystic-crypt",
 ]
 
 [plugins]

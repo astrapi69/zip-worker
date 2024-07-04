@@ -2,8 +2,6 @@ dependencies {
 
     implementation libs.commons.compress
     implementation libs.xz
-    implementation libs.file.worker
-    testImplementation libs.mystic.crypt
     // Note: use of bundles...
     testImplementation libs.bundles.unit.testing
     testRuntimeOnly libs.junit.platform.launcher
