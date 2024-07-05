@@ -1,6 +1,9 @@
 dependencies {
 
     implementation libs.commons.compress
+    implementation libs.file.worker
+    implementation libs.silly.collection
+    implementation libs.silly.io
     implementation libs.xz
     // Note: use of bundles...
     testImplementation libs.bundles.unit.testing
