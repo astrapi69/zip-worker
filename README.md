@@ -226,4 +226,3 @@ Do not hesitate to contact the zip-worker developers with your questions, concer
 ## Similar projects
 
 ## Credits
-
