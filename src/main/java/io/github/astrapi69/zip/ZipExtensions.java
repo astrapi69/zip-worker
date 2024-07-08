@@ -63,29 +63,6 @@ public final class ZipExtensions
 	}
 
 	/**
-	 * Adds the file.
-	 *
-	 * @param file
-	 *            the file
-	 * @param dirToZip
-	 *            the dir to zip
-	 * @param zos
-	 *            the zos
-	 * @throws IOException
-	 *             Signals that an I/O exception has occurred.
-	 */
-	private static void addFile(final File file, final File dirToZip, final ZipOutputStream zos)
-		throws IOException
-	{
-		final String zipEntryName = getZipEntryName(file, dirToZip);
-		final byte[] b = new byte[(int)file.length()];
-		final ZipEntry cpZipEntry = new ZipEntry(zipEntryName);
-		zos.putNextEntry(cpZipEntry);
-		zos.write(b, 0, (int)file.length());
-		zos.closeEntry();
-	}
-
-	/**
 	 * Extract zip entry.
 	 *
 	 * @param zipFile
@@ -326,7 +303,12 @@ public final class ZipExtensions
 		}
 		else
 		{
-			addFile(file, dirToZip, zos);
+			final String zipEntryName = getZipEntryName(file, dirToZip);
+			final byte[] b = new byte[(int)file.length()];
+			final ZipEntry cpZipEntry = new ZipEntry(zipEntryName);
+			zos.putNextEntry(cpZipEntry);
+			zos.write(b, 0, (int)file.length());
+			zos.closeEntry();
 		}
 	}
 
