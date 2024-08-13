@@ -4,7 +4,16 @@
 Version 1.1-SNAPSHOT
 -------------
 
+CHANGED:
 
+- update gradle to new version 8.10-rc1
+- update of gradle-plugin dependency with id 'org.jetbrains.kotlin.jvm' to new release candidate version  27.0
+- update of dependency commons-compress to new version 1.27.0
+- update of dependency xz to new version 1.10
+- update of test dependency meanbean-factories to new version 3
+- update of test dependency mystic-crypt to new version 9.1
+- update of test dependency file-worker to new version 17.4
+- update of test dependency junit-jupiter to new version 5.11.0-RC1
 
 Version 1
 -------------
